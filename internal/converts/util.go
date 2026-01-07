@@ -91,5 +91,8 @@ func nValueToInterface(p *nebula_type.Value) interface{} {
 	if p.IsSetGVal() {
 		return p.GetGVal()
 	}
+	if p.IsSetSVal() {
+		return string(p.GetSVal())
+	}
 	return nil
 }
