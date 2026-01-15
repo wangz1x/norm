@@ -92,7 +92,7 @@ func nValueToInterface(p *nebula_type.Value) interface{} {
 		return p.GetGVal()
 	}
 	if p.IsSetSVal() {
-		return string(p.GetSVal())
+		return p.GetSVal()
 	}
 	return nil
 }
